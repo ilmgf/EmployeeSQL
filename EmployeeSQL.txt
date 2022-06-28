@@ -1,0 +1,23 @@
+create table Employee(emp_id int, emp_role varchar(20), emp_name varchar(80), 
+					  emp_salary int, emp_status varchar(20));
+					  
+insert into Employee (emp_id, emp_role, emp_name, emp_salary, emp_status) 
+					values(212, 'Manager', 'Blaine Jackson', 85000, 'full-time');
+insert into Employee (emp_id, emp_role, emp_name, emp_salary, emp_status) 
+					values(213, 'HR', 'Aaliyah Jackson', 35000, 'full-time');
+insert into Employee (emp_id, emp_role, emp_name, emp_salary, emp_status) 
+					values(214, 'Janitorial', 'Sasha Jackson', 20000, 'full-time');
+insert into Employee (emp_id, emp_role, emp_name, emp_salary, emp_status) 
+					values(215, 'developer', 'Julio Johnson', 40000, 'full-time');
+					insert into Employee (emp_id, emp_role, emp_name, emp_salary, emp_status) 
+					values(216, 'Instructor', 'Dory Jackson', 60000, 'full-time');
+					
+alter table Employee rename column emp_salary to salary;
+alter table Employee rename column emp_name to name;
+
+update Employee set emp_status = 'part-time' where emp_role = 'Janitorial'; 
+
+delete salary from Employee;
+delete emp_status from Employee;
+select emp_id from Employee where emp_role = 'developer';
+select emp_role from Employee where emp_role = 'developer';
